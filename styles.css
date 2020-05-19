@@ -25,3 +25,14 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.movingDancer {
+  border:10px solid blue;
+  border-radius:10px;
+  position:absolute;
+  transition: all 0.5s ease-in-out;
+}
+.squareDancer {
+  border:10px solid green;
+  position:absolute;
+  transition: all 0.5s ease-in-out;
+}
