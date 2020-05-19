@@ -1,5 +1,7 @@
 body, html{
   height:100%;
+  background-image: url(https://static.wixstatic.com/media/00be27_8ae843cd3ece2cc42f8e509465737d76.jpg/v1/fit/w_2500,h_1330,al_c/00be27_8ae843cd3ece2cc42f8e509465737d76.jpg);
+  background-size: cover;
 }
 body{
   margin: 0px;
@@ -9,7 +11,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .partnerDance, .pairUp, .partyOn, .lineUp, .addDancerButton{
   padding:5px 12px;
   float:right;
 }
@@ -25,14 +27,49 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
 .movingDancer {
-  border:10px solid blue;
+  /* border:10px solid #15f4ee; */
   border-radius:10px;
   position:absolute;
   transition: all 0.5s ease-in-out;
 }
+
+.movingDancer img {
+  width: 50%;
+  height: 50%;
+
+}
+
 .squareDancer {
-  border:10px solid green;
+  border:10px solid transparent;
   position:absolute;
   transition: all 0.5s ease-in-out;
+
+}
+
+.squareDancer img {
+  width: 30%;
+  height: 20%;
+}
+
+.hoverDancer {
+  /* border:1px solid #FF69B4; */
+  position:absolute;
+  transition: all 0.2s ease-in-out;
+  /* background-image: url(https://i.dlpng.com/static/png/139158_preview.png); */
+}
+
+.hoverDancer img {
+  width: 30%;
+  height: 20%;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
 }

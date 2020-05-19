@@ -2,7 +2,7 @@ var movingDancer = function(top, left, timeBetweenSteps) {
   //var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  this.$node = $('<span class="movingDancer"></span>');
+  this.$node = $('<span class="movingDancer"><img src="https://pa1.narvii.com/5620/6e4005353343af4a0ae261cfe636c2f99e54b1ed_00.gif"></span>');
   this.top = top;
   this.left = left;
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -29,11 +29,13 @@ movingDancer.prototype.step = function() {
   // other effects you can use on a jQuery-wrapped html tag.
   // var move = makeDancer.prototype.setPosition;
   // move(Math.random(), Math.random());
+
   var styleSettings = {
     top: $("body").height() * Math.random(),
     left: $("body").width() * Math.random()
   };
   this.$node.css(styleSettings);
+
   // this.$node.css('color', 'blue');
   // this.$node.toggle();
 
